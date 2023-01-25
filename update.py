@@ -13,7 +13,7 @@ basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     handlers=[FileHandler('log.txt'), StreamHandler()],
                     level=INFO)
 
-load_dotenv('config.env', override=True)
+load_dotenv('/etc/secrets/config.env', override=True)
 
 try:
     if bool(environ.get('_____REMOVE_THIS_LINE_____')):
